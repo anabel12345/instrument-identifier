@@ -7,6 +7,45 @@
     <title>Instrument Identifier</title>
 </head>
 <body>
-    
+    <header id="nav-bar">
+        <div class="home-logo" onclick = displayChildren(navLinksContainer)> 
+            logo placeholder
+        </div>
+        <a href="#" class="hamburger" id="hamburger" >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li class="nav-link"><a href="#">Try It Out</a></li>
+                <li class="nav-link"><a href="#">About Me</a></li>
+                <li class="nav-link"><a href="#">The Process</a></li>
+                <li class="nav-link"><a href="#">More Info</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+
+    <script>
+
+
+
+
+
+
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    if (window.innerWidth < 700) {
+        navLinks.classList.toggle('show');
+    }
+});
+
+    </script>
 </body>
 </html>

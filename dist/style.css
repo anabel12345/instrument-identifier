@@ -16,3 +16,92 @@ body{
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
 }
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: rgba(0,0,0,0.5);
+    height:14vh;
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+
+nav .nav-links{
+    display:flex;
+    justify-content: space-between;
+    gap:10px;
+
+}
+
+nav .nav-link{
+    padding:10px;
+    color:white;
+    border-radius: 30%;
+}
+
+
+.home-logo{
+    font-size:2rem;
+    margin:0rem 1.5rem;
+}
+
+
+
+
+
+
+.hamburger{
+    position:absolute;
+    right:1.5rem;
+    flex-direction:column;
+    justify-content: space-between;
+    width:30px;
+    height:21px;
+}
+
+.hamburger .bar{
+    height:3px;
+    width:100%;
+    background-color: #fff;
+    border-radius: 5px;
+
+}
+
+
+
+@media (max-width: 700px) {
+    .hamburger{
+        display: flex;
+        cursor:pointer;
+    }
+    nav .nav-links{
+        display:none;
+        flex-direction: column;
+        position:fixed;
+        top:14vh;
+        left:0%;
+        background-color: rgba(0,0,0,0.5);
+        width:100%;
+        align-items:center;
+        color:white;
+        padding-bottom:20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    li{
+        background:none;
+    }
+
+    nav .nav-links.show{
+        display: flex;
+        max-height:200px;
+        transition: max-height 0.3s ease !important;
+    }
+}
